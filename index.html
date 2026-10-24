@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portofolio mahasiswa Informatika konsentrasi Website angkatan 2024, Universitas Cokroaminoto Palopo.">
+
+    <title>Portofolio Mahasiswa | Informatika 2024</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGASI -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#beranda" class="logo">
+                <span class="logo-icon">P.</span>
+                <span>MyPortfolio<span class="dot">.</span></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#beranda">Beranda</a>
+                <a href="#tentang">Tentang Saya</a>
+                <a href="#biodata">Biodata</a>
+                <a href="#keahlian">Minat</a>
+                <a href="#kontak" class="nav-button">Hubungi Saya ↗</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Buka menu navigasi"
+                    aria-expanded="false"
+                    aria-controls="navLinks">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="beranda">
+            <div class="container hero-grid">
+
+                <div class="hero-text">
+                    <span class="eyebrow">
+                        ✦ PERSONAL STUDENT PORTFOLIO
+                    </span>
+
+                    <p class="welcome">Halo, selamat datang!</p>
+
+                    <h1>
+                        Mengenal Saya,<br>
+                        <span>Calon Web Developer.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Saya mahasiswa Program Studi Informatika,
+                        konsentrasi Website, angkatan 2024 di
+                        Universitas Cokroaminoto Palopo.
+                        Saya terus belajar, berkreasi, dan
+                        mengembangkan kemampuan di dunia teknologi.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#tentang" class="btn btn-primary">
+                            Kenali Saya <span>↗</span>
+                        </a>
+
+                        <a href="#biodata" class="btn btn-secondary">
+                            Lihat Biodata
+                        </a>
+                    </div>
+
+                    <div class="hero-note">
+                        <span class="status-dot"></span>
+                        Mahasiswa Informatika · Angkatan 2024
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="photo-decoration"></div>
+
+                    <div class="photo-card">
+                        <div class="photo-frame">
+                            <img src="foto-profil.jpg"  
+                                 alt="Foto profil mahasiswa"
+                                 onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';">
+
+                            <div class="photo-fallback" id="photoFallback">
+                                <span>✿</span>
+                                <p>Foto Profil Kamu</p>
+                                <small><img src="2.jpg" width="100px"></small>
+                            </div>
+
+                            <span class="photo-badge">
+                                ✦ Informatika 2024
+                            </span>
+                        </div>
+
+                        <div class="photo-caption">
+                            <div>
+                                <p class="caption-small">STUDENT PORTFOLIO</p>
+                                <h3>Website Hosting</h3>
+                            </div>
+                            <span class="caption-heart">♡</span>
+                        </div>
+                    </div>
+
+                  
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TENTANG SAYA -->
+        <section class="section about-section" id="tentang">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">ABOUT ME</span>
+                    <h2>Tentang <span>Saya</span></h2>
+                    <p>Perjalanan kecil menuju masa depan yang besar.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-quote">
+                        <span class="quote-mark">“</span>
+
+                        <h3>Terus belajar dan jangan takut mencoba hal baru.</h3>
+
+                        <p>
+                            Setiap proses adalah kesempatan untuk
+                            bertumbuh dan menjadi lebih baik.
+                        </p>
+
+                        <div class="quote-line"></div>
+                        <span class="quote-label">MY PERSONAL MOTTO</span>
+                    </div>
+
+                    <div class="about-content">
+                        <h3>Halo, senang bertemu denganmu!</h3>
+
+                        <p>
+                            Saya adalah mahasiswa Universitas
+                            Cokroaminoto Palopo, Program Studi
+                            Informatika dengan konsentrasi Website,
+                            angkatan 2024.
+                        </p>
+
+                        <p>
+                            Saya memiliki ketertarikan pada dunia
+                            website, teknologi digital, dan pembuatan
+                            halaman web. Melalui proses perkuliahan,
+                            saya ingin memahami bagaimana website
+                            dirancang, dibangun, dan dipublikasikan
+                            agar dapat digunakan dengan mudah.
+                        </p>
+
+                        <p>
+                            Di luar kegiatan belajar, saya memiliki
+                            hobi makan dan menikmati berbagai macam
+                            makanan. Bagi saya, belajar dan menikmati
+                            hal-hal sederhana adalah bagian dari
+                            perjalanan hidup yang menyenangkan.
+                        </p>
+
+                        <a href="#biodata" class="text-link">
+                            Kenali biodata saya <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BIODATA -->
+        <section class="section biodata-section" id="biodata">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">PERSONAL INFORMATION</span>
+                    <h2>Biodata <span>Mahasiswa</span></h2>
+                    <p>Informasi singkat mengenai identitas dan pendidikan saya.</p>
+                </div>
+
+                <div class="biodata-card">
+                    <div class="biodata-header">
+                        <div class="biodata-avatar">✿</div>
+                        <div>
+                            <span class="biodata-label">STUDENT PROFILE</span>
+                            <h3>Profil Akademik</h3>
+                            <p>Universitas Cokroaminoto Palopo</p>
+                        </div>
+                    </div>
+
+                    <div class="biodata-list">
+                        <div class="biodata-row">
+                            <span class="bio-icon">👤</span>
+                            <div class="bio-label">Nama</div>
+                            <div class="bio-value">TRI NURAENI</div>
+                        </div>
+
+                        <div class="biodata-row">
+                            <span class="bio-icon">🎓</span>
+                            <div class="bio-label">Status</div>
+                            <div class="bio-value">Mahasiswa</div>
+                        </div>
+
+                        <div class="biodata-row">
+                            <span class="bio-icon">🏛️</span>
+                            <div class="bio-label">Universitas</div>
+                            <div class="bio-value">Universitas Cokroaminoto Palopo</div>
+                        </div>
+
+                        <div class="biodata-row">
+                            <span class="bio-icon">📚</span>
+                            <div class="bio-label">Program Studi</div>
+                            <div class="bio-value">Informatika</div>
+                        </div>
+
+                        <div class="biodata-row">
+                            <span class="bio-icon">💻</span>
+                            <div class="bio-label">Konsentrasi</div>
+                            <div class="bio-value">Website</div>
+                        </div>
+
+                        <div class="biodata-row">
+                            <span class="bio-icon">📅</span>
+                            <div class="bio-label">Angkatan</div>
+                            <div class="bio-value">2024</div>
+                        </div>
+
+                        <div class="biodata-row">
+                            <span class="bio-icon">📍</span>
+                            <div class="bio-label">Alamat</div>
+                            <div class="bio-value">
+                                Kelurahan Tomoni, Kecamatan Tomoni,
+                                Kabupaten Luwu Timur
+                            </div>
+                        </div>
+
+                        <div class="biodata-row">
+                            <span class="bio-icon">🍜</span>
+                            <div class="bio-label">Hobi</div>
+                            <div class="bio-value">Makan dan mencoba kuliner</div>
+                        </div>
+
+                        <div class="biodata-row">
+                            <span class="bio-icon">🌱</span>
+                            <div class="bio-label">Motto</div>
+                            <div class="bio-value">Belajar, berkembang, dan berkarya.</div>
+                        </div>
+                    </div>
+
+                    <p class="privacy-note">
+                        Catatan: informasi pribadi yang ditampilkan
+                        dapat disesuaikan dengan kebutuhan tugas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MINAT DAN KETERAMPILAN -->
+        <section class="section skills-section" id="keahlian">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">MY INTERESTS</span>
+                    <h2>Minat & <span>Pengembangan Diri</span></h2>
+                    <p>Bidang yang ingin saya pelajari dan kembangkan.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <div class="skill-icon teal">🌐</div>
+                        <h3>HTML</h3>
+                        <p>
+                            Mempelajari struktur halaman website
+                            agar tersusun dengan baik.
+                        </p>
+                        <span class="skill-tag">Web Fundamental</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon gold">🎨</div>
+                        <h3>CSS</h3>
+                        <p>
+                            Mengenal desain, warna, layout,
+                            dan tampilan website responsif.
+                        </p>
+                        <span class="skill-tag">Web Design</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon blue">⚡</div>
+                        <h3>JavaScript</h3>
+                        <p>
+                            Mempelajari interaksi dan fitur
+                            dinamis pada halaman website.
+                        </p>
+                        <span class="skill-tag">Interactivity</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon pink">🚀</div>
+                        <h3>Hosting Website</h3>
+                        <p>
+                            Memahami cara mengunggah file dan
+                            memublikasikan website ke internet.
+                        </p>
+                        <span class="skill-tag">Web Publishing</span>
+                    </article>
+                </div>
+
+                <p class="skills-disclaimer">
+                    *Bagian ini menunjukkan bidang yang dipelajari
+                    atau diminati, bukan klaim tingkat keahlian profesional.
+                </p>
+            </div>
+        </section>
+
+        <!-- TUJUAN -->
+        <section class="section goal-section" id="tujuan">
+            <div class="container goal-grid">
+
+                <div class="goal-content">
+                    <span class="eyebrow">MY LEARNING GOALS</span>
+
+                    <h2>Belajar Hari Ini,<br><span>Berkarya Esok Hari.</span></h2>
+
+                    <p>
+                        Portofolio ini dibuat sebagai media
+                        perkenalan diri sekaligus latihan praktik
+                        Administrasi Website. Melalui proyek ini,
+                        saya belajar menggabungkan struktur HTML
+                        dengan CSS untuk menghasilkan halaman
+                        yang informatif, menarik, dan responsif.
+                    </p>
+
+                    <p>
+                        Saya juga ingin memahami proses pengelolaan
+                        file website, pengujian tampilan, dan
+                        publikasi melalui layanan hosting.
+                    </p>
+
+                    <a href="#penutup" class="btn btn-primary">
+                        Lihat Kesimpulan ↗
+                    </a>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-number">01</span>
+                        <div>
+                            <h3>Mengenal HTML</h3>
+                            <p>Menyusun elemen dan struktur halaman web.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-number">02</span>
+                        <div>
+                            <h3>Mendesain dengan CSS</h3>
+                            <p>Mengatur warna, tipografi, jarak, dan layout.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-number">03</span>
+                        <div>
+                            <h3>Menguji Website</h3>
+                            <p>Memastikan tautan, foto, dan tampilan berjalan baik.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-number">04</span>
+                        <div>
+                            <h3>Publikasi Website</h3>
+                            <p>Mempelajari pengunggahan file ke layanan hosting.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PENUTUP -->
+        <section class="section closing-section" id="penutup">
+            <div class="container">
+                <div class="closing-card">
+                    <span class="closing-flower">✿</span>
+
+                    <span class="eyebrow">THANK YOU FOR VISITING</span>
+
+                    <h2>Setiap Langkah Adalah <span>Proses Bertumbuh.</span></h2>
+
+                    <p>
+                        Terima kasih telah mengunjungi website
+                        portofolio saya. Semoga karya sederhana
+                        ini menjadi langkah awal untuk terus
+                        belajar, mengembangkan kreativitas,
+                        dan memahami dunia teknologi informasi.
+                    </p>
+
+                    <a href="#beranda" class="btn btn-light">
+                        ↑ Kembali ke Beranda
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#beranda" class="footer-logo">MyPortfolio.</a>
+
+            <p>
+                © <span id="currentYear"></span>
+                Portofolio Mahasiswa Informatika.
+            </p>
+
+            <p class="footer-credit">
+                Made with ♡ and passion for technology.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Tahun otomatis pada footer
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+        // Navigasi untuk perangkat mobile
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("active");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+        // Tutup menu setelah tautan dipilih
+        navLinks.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.textContent = "☰";
+            });
+        });
+
+        // Animasi ketika elemen masuk ke layar
+        const animatedElements = document.querySelectorAll(".reveal");
+
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12
+            });
+
+            animatedElements.forEach(function (element) {
+                observer.observe(element);
+            });
+        } else {
+            animatedElements.forEach(function (element) {
+                element.classList.add("visible");
+            });
+        }
+    </script>
+
+</body>
+</html>
