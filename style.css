@@ -1,0 +1,1123 @@
+
+/* =========================================
+   01. VARIABEL DAN RESET
+========================================= */
+:root {
+    --green: #176b58;
+    --green-dark: #103f37;
+    --green-light: #e3f0e8;
+    --cream: #faf7ef;
+    --white: #ffffff;
+    --gold: #c39a55;
+    --text: #263c36;
+    --muted: #788780;
+    --border: #e7e9e1;
+    --shadow: 0 15px 40px rgba(24, 67, 54, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    line-height: 1.3;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin-top: 9px;
+    font-size: clamp(29px, 4vw, 40px);
+}
+
+.section-heading h2 span,
+.goal-content h2 span,
+.closing-card h2 span {
+    color: var(--green);
+}
+
+.section-heading > p {
+    color: var(--muted);
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* =========================================
+   02. NAVIGASI
+========================================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 253, 248, 0.94);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(226, 230, 220, 0.9);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 78px;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.logo-icon {
+    display: grid;
+    place-items: center;
+    width: 41px;
+    height: 41px;
+    border-radius: 13px;
+    background: var(--green);
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+}
+
+.dot {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #68766f;
+    font-size: 12px;
+    font-weight: 700;
+    transition: color .25s;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.nav-links .nav-button {
+    padding: 10px 16px;
+    border-radius: 9px;
+    background: var(--green);
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: white;
+    color: var(--green);
+    cursor: pointer;
+}
+
+/* =========================================
+   03. TOMBOL
+========================================= */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    min-height: 47px;
+    padding: 12px 21px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: transform .25s, box-shadow .25s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(23, 107, 88, 0.18);
+}
+
+.btn-primary {
+    background: var(--green);
+    color: white;
+}
+
+.btn-secondary {
+    border-color: #dce2d8;
+    background: white;
+    color: var(--text);
+}
+
+.btn-light {
+    background: white;
+    color: var(--green-dark);
+}
+
+/* =========================================
+   04. HERO SECTION
+========================================= */
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 92px 0 100px;
+    background:
+        radial-gradient(ellipse at 88% 15%, #dcebe0 0, transparent 33%),
+        radial-gradient(ellipse at 0% 90%, #f1e8d5 0, transparent 30%),
+        var(--cream);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.hero-text {
+    animation: slideUp .8s ease both;
+}
+
+.hero-text > .eyebrow {
+    padding: 8px 13px;
+    border: 1px solid #d7e5d8;
+    border-radius: 30px;
+    background: #ffffffa6;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.welcome {
+    margin-top: 28px;
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 61px);
+    letter-spacing: -1.4px;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero-description {
+    max-width: 520px;
+    margin: 22px 0 27px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 25px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #299a72;
+    box-shadow: 0 0 0 4px #299a721c;
+}
+
+/* Foto profil */
+.hero-visual {
+    position: relative;
+    max-width: 380px;
+    width: 100%;
+    margin: auto;
+    animation: fadeIn .9s ease both;
+}
+
+.photo-decoration {
+    position: absolute;
+    inset: 19px -15px -17px 18px;
+    border: 2px solid #a9c6a8;
+    border-radius: 28px;
+    transform: rotate(4deg);
+}
+
+.photo-card {
+    position: relative;
+    padding: 13px;
+    border: 1px solid #ebe9df;
+    border-radius: 25px;
+    background: white;
+    box-shadow: var(--shadow);
+    transform: rotate(-2deg);
+    transition: transform .3s;
+}
+
+.photo-card:hover {
+    transform: rotate(0);
+}
+
+.photo-frame {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #d8e8dc, #f3e9d5);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+}
+
+.photo-fallback {
+    position: absolute;
+    inset: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--green);
+    text-align: center;
+}
+
+.photo-fallback span {
+    font-size: 55px;
+}
+
+.photo-fallback p {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+}
+
+.photo-fallback small {
+    font-size: 11px;
+}
+
+.photo-badge {
+    position: absolute;
+    bottom: 13px;
+    left: 13px;
+    padding: 8px 12px;
+    border-radius: 9px;
+    background: #fffdf4ee;
+    color: var(--green-dark);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.photo-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 17px 5px 4px;
+}
+
+.caption-small {
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.photo-caption h3 {
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+.caption-heart {
+    color: var(--green);
+    font-size: 29px;
+}
+
+.floating-card {
+    position: absolute;
+    right: -28px;
+    bottom: 90px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.floating-icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    background: var(--green-light);
+    font-size: 20px;
+}
+
+.floating-card strong {
+    display: block;
+    font-size: 11px;
+}
+
+.floating-card p {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* =========================================
+   05. TENTANG SAYA
+========================================= */
+.about-section {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: .82fr 1.18fr;
+    gap: 35px;
+    align-items: stretch;
+}
+
+.about-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 38px;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #174c40, #103c35);
+    color: white;
+}
+
+.quote-mark {
+    color: #d8b779;
+    font-family: "Playfair Display", serif;
+    font-size: 75px;
+    line-height: 1;
+}
+
+.about-quote h3 {
+    margin: 15px 0;
+    font-size: 27px;
+}
+
+.about-quote p {
+    color: #d0e0d8;
+    font-size: 13px;
+}
+
+.quote-line {
+    width: 48px;
+    height: 2px;
+    margin: 25px 0 13px;
+    background: var(--gold);
+}
+
+.quote-label {
+    color: #d8b779;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.about-content {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: var(--cream);
+}
+
+.about-content h3 {
+    margin-bottom: 16px;
+    font-size: 25px;
+}
+
+.about-content p {
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* =========================================
+   06. BIODATA
+========================================= */
+.biodata-section {
+    background: var(--cream);
+}
+
+.biodata-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: 23px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.biodata-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.biodata-avatar {
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    flex-shrink: 0;
+    border-radius: 19px;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: 35px;
+}
+
+.biodata-label {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.biodata-header h3 {
+    margin: 3px 0;
+    font-size: 24px;
+}
+
+.biodata-header p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.biodata-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 30px;
+}
+
+.biodata-row {
+    display: grid;
+    grid-template-columns: 32px 100px minmax(0, 1fr);
+    align-items: start;
+    gap: 8px;
+    padding: 17px 0;
+    border-bottom: 1px solid #eff0e9;
+}
+
+.bio-icon {
+    font-size: 17px;
+}
+
+.bio-label {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.bio-value {
+    overflow-wrap: anywhere;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.privacy-note {
+    margin-top: 23px;
+    padding: 12px 15px;
+    border-radius: 9px;
+    background: #f5f7ef;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* =========================================
+   07. MINAT DAN KETERAMPILAN
+========================================= */
+.skills-section {
+    background: white;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.skill-card {
+    padding: 27px 21px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: #fffefa;
+    transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: #b7cdb9;
+    box-shadow: var(--shadow);
+}
+
+.skill-icon {
+    display: grid;
+    place-items: center;
+    width: 53px;
+    height: 53px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+.skill-icon.teal {
+    background: #dcefe5;
+}
+
+.skill-icon.gold {
+    background: #f5ead5;
+}
+
+.skill-icon.blue {
+    background: #e1eaf7;
+}
+
+.skill-icon.pink {
+    background: #f4e3e3;
+}
+
+.skill-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    min-height: 90px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.skill-tag {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 6px 9px;
+    border-radius: 7px;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.skills-disclaimer {
+    margin-top: 23px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 11px;
+}
+
+/* =========================================
+   08. TUJUAN DAN TIMELINE
+========================================= */
+.goal-section {
+    background: var(--cream);
+}
+
+.goal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.goal-content h2 {
+    margin: 15px 0 22px;
+    font-size: clamp(30px, 4vw, 43px);
+}
+
+.goal-content > p {
+    margin-bottom: 17px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.goal-content .btn {
+    margin-top: 9px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 12px;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding-bottom: 32px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 20px;
+    bottom: 0;
+    width: 1px;
+    background: #cddbcc;
+}
+
+.timeline-number {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border: 1px solid #cbdcca;
+    border-radius: 13px;
+    background: white;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.timeline-item h3 {
+    margin: 4px 0 7px;
+    font-size: 19px;
+}
+
+.timeline-item p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* =========================================
+   09. PENUTUP
+========================================= */
+.closing-section {
+    padding-top: 35px;
+    background: var(--cream);
+}
+
+.closing-card {
+    padding: 65px 35px;
+    border-radius: 26px;
+    background:
+        radial-gradient(ellipse at 100% 0%, #ffffff16, transparent 35%),
+        linear-gradient(135deg, #164d40, #10372f);
+    color: white;
+    text-align: center;
+}
+
+.closing-flower {
+    display: block;
+    margin-bottom: 15px;
+    color: #e0c18b;
+    font-size: 37px;
+}
+
+.closing-card .eyebrow {
+    color: #e4c792;
+}
+
+.closing-card h2 {
+    max-width: 680px;
+    margin: 15px auto;
+    font-size: clamp(28px, 4vw, 43px);
+}
+
+.closing-card h2 span {
+    color: #e4c792;
+}
+
+.closing-card > p {
+    max-width: 620px;
+    margin: 0 auto 25px;
+    color: #d4e4dc;
+    font-size: 13px;
+}
+
+.closing-card .btn {
+    margin-top: 5px;
+}
+
+/* =========================================
+   10. FOOTER
+========================================= */
+.footer {
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+    background: white;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.footer-logo {
+    color: var(--green);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.footer-content p {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* =========================================
+   11. ANIMASI
+========================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* =========================================
+   12. RESPONSIVE TABLET
+========================================= */
+@media (max-width: 950px) {
+    .hero-grid {
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .floating-card {
+        right: -10px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        gap: 22px;
+    }
+
+    .biodata-card {
+        padding: 25px;
+    }
+
+    .biodata-row {
+        grid-template-columns: 25px 85px minmax(0, 1fr);
+        gap: 6px;
+    }
+
+    .goal-grid {
+        gap: 35px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================================
+   13. RESPONSIVE MOBILE
+========================================= */
+@media (max-width: 680px) {
+    .container {
+        width: 91%;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .nav-content {
+        min-height: 70px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        padding: 10px 0 18px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 9px 10px;
+        font-size: 13px;
+    }
+
+    .nav-links .nav-button {
+        text-align: center;
+    }
+
+    .hero {
+        padding: 62px 0 75px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 52px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 9vw, 49px);
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-note {
+        justify-content: center;
+        font-size: 10px;
+    }
+
+    .hero-visual {
+        max-width: 310px;
+    }
+
+    .photo-frame {
+        height: 315px;
+    }
+
+    .floating-card {
+        right: -8px;
+        bottom: 82px;
+        padding: 10px;
+    }
+
+    .floating-card strong {
+        font-size: 10px;
+    }
+
+    .about-grid,
+    .goal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-quote,
+    .about-content {
+        padding: 27px;
+    }
+
+    .about-quote h3 {
+        font-size: 24px;
+    }
+
+    .biodata-card {
+        padding: 21px;
+    }
+
+    .biodata-header {
+        align-items: flex-start;
+        gap: 13px;
+    }
+
+    .biodata-avatar {
+        width: 52px;
+        height: 52px;
+        font-size: 27px;
+    }
+
+    .biodata-header h3 {
+        font-size: 20px;
+    }
+
+    .biodata-list {
+        grid-template-columns: 1fr;
+    }
+
+    .biodata-row {
+        grid-template-columns: 29px 95px minmax(0, 1fr);
+    }
+
+    .bio-label,
+    .bio-value {
+        font-size: 12px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 23px;
+    }
+
+    .skill-card p {
+        min-height: auto;
+    }
+
+    .goal-content h2 {
+        font-size: 33px;
+    }
+
+    .timeline-item h3 {
+        font-size: 17px;
+    }
+
+    .closing-section {
+        padding-top: 10px;
+    }
+
+    .closing-card {
+        padding: 45px 22px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+}
